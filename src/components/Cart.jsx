@@ -22,7 +22,7 @@ export default function Cart(){
           {cartCtx.items.map((item) => (
             <CartItem key={item.id} name={item.name} 
             quantity={item.quantity} price={item.price}
-            onIncrase={() => cartCtx.addItem(item)} onDecrease={() => cartCtx.removeItem(item)}/>
+            onIncrase={() => cartCtx.addItem(item)} onDecrease={() => cartCtx.removeItem(item.id)}/>
           ))}
         </ul>
         <p className="cart-total">{currencyFormatter.format(cartTotal)}</p>
